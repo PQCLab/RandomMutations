@@ -36,7 +36,7 @@ Variable `rmparams` also stores debug information on iterations:
 * `rmparams.best_x` - cell array of minimal points on each iteration
 
 ## Example
-The following MATLAB script evaluates the global maximum of the function ![\sum_{k=1}^{100}{|sin(x_k+b)|}](https://latex.codecogs.com/svg.latex?\sum_{k=1}^{100}{|\sin(x_k+b)|}).
+The following MATLAB script evaluates the global maximum of the function ![\sum{|sin(x_k+b)|}](https://latex.codecogs.com/svg.latex?\sum{|\sin(x_k+b)|}).
 ```
 rm_init; % Initialize optimizer parameters
 rmparams.n_pop = 100; % Change population size
