@@ -1,8 +1,9 @@
 # Random mutations optimization
 MATLAB library for global optimization of an arbitrary function by random mutations algorithm. Version 0.2.
 
-
 https://arxiv.org/abs/1304.3703
+
+Before using the library, please read the [terms of use](#terms-of-use).
 
 ## Getting started
 To use the library download and include the files to the search path.
@@ -46,3 +47,10 @@ function res = TestFunc(x, b) % Function to minimize
   res = sum(abs(sin(x+b)));
 end
 ```
+
+## <a name="#terms-of-use">Terms of use</a>
+This library is distributed under GNU General Public License v3.0.
+
+For using the library in research work, please cite as:
+> [1] Chernyavskiy A. Yu., Calculation of quantum discord and entanglement measures using the random mutations optimization algorithm, arXiv:1304.3703 [quant-ph], 2013.  
+> [2] Chernyavskiy A. Yu., Global optimization solver for MATLAB, URL: https://github.com/PQCLab/RandomMutations
