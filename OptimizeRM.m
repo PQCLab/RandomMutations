@@ -22,6 +22,7 @@ p_min = rmparams.p_min;
 iters = rmparams.n_stall;
 eps = rmparams.eps; 
 b = rmparams.b;
+local_search = rmparams.local_search;
 
 min = -1*scale;
 max = 1*scale;
@@ -88,6 +89,11 @@ while not_changed<iters
     rmparams.best_x{iteration}=global_best;
 end
 
+if local_search
+    disp('Local search by fminsearch');
+    options = optimset('Display', 'off', 'TolFun', eps, 'TolX', eps);
+    [global_best, global_best_f] = fminsearch(f, global_best, options);
+end
 
 end
 

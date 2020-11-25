@@ -26,6 +26,7 @@ Parameters of the algorithm are stored in the global variable `rmparams`:
 * `rmparams.p_min` - minimum scale power (default: `-9`); decreases convergence speed, increases accuracy of local convergence
 * `rmparams.p_max` - maximum scale power (default: `1`)
 * `rmparams.b` - scale factor (default: `10`)
+* `rmparams.local_search` - perform local optimization at the end of iterations with `fminsearch` (default: `0`)
 
 Varying parameter is being changed by a factor `m*rmparams.b^p`, where `m` is uniformly distributed from `-1` to `1`, `p` is an integer uniformly distributed from `rmparams.p_min` to `rmparams.p_max`.
 
