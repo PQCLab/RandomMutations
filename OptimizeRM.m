@@ -90,7 +90,9 @@ while not_changed<iters
 end
 
 if local_search
-    disp('Local search by fminsearch');
+    if(rmparams.display)
+        disp('Local search by fminsearch');
+    end
     options = optimset('Display', 'off', 'TolFun', eps, 'TolX', eps);
     [global_best, global_best_f] = fminsearch(f, global_best, options);
 end
